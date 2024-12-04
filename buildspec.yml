@@ -12,4 +12,6 @@ phases:
       - cdk deploy --require-approval never
 artifacts:
   files:
-    - '**/*'
+    - 'cdk.out/**/*'       
+    - 'cdk.out/CdkProject8903870Stack.template.json'  
+  discard-paths: no
