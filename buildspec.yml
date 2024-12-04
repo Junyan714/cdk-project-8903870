@@ -9,7 +9,6 @@ phases:
   build:
     commands:
       - cdk synth
-      - cdk deploy --require-approval never --capabilities CAPABILITY_IAM
 artifacts:
   base-directory: cdk.out  # Include the directory where CDK stores artifacts
   files:
