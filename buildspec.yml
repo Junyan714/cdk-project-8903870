@@ -2,16 +2,14 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 14
     commands:
-      - npm install -g aws-cdk@latest
+      - npm install -g aws-cdk
       - npm install
   build:
     commands:
       - cdk synth
-      - cdk deploy --require-approval never
 artifacts:
+  base-directory: cdk.out  # Include the directory where CDK stores artifacts
   files:
-    - 'cdk.out/**/*'       
-    - 'cdk.out/CdkProject8903870Stack.template.json'  
-  discard-paths: no
+    - '**/*'             # Include all files in the directory
